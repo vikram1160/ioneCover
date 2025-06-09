@@ -1,0 +1,106 @@
+/* General Styles */
+nav {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+}
+
+/* Navbar brand link */
+.navbar-brand {
+  font-size: 1.25rem;
+}
+
+/* Navbar collapsible area */
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation links */
+.nav-link {
+  font-weight: 500;
+  color: #343a40 !important;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Search form input and button */
+form[role="search"] {
+  gap: 0.5rem;
+}
+
+/* Gap between navbar items */
+.navbar-nav {
+  gap: 0.5rem;
+}
+
+.logout-btn{
+  margin-top: -4.7%;
+    margin-left: 90%;
+}
+
+
+
+/* Small screens (mobile) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  form[role="search"] {
+    width: 100%;
+  }
+
+  form[role="search"] input {
+    width: 100%;
+  }
+
+  form[role="search"] button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width:868px) {
+     .navbar-brand{
+   margin-top: -28%;
+   position: fixed;
+  }
+    
+}
+
+/* Large screens (laptop and above) */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form[role="search"] {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form[role="search"] input {
+    width: auto;
+  }
+
+  form[role="search"] button {
+    width: auto;
+    margin-top: 0;
+  }
+ 
+}

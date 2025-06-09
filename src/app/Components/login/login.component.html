@@ -1,0 +1,47 @@
+<div class="login-container d-flex align-items-center justify-content-center vh-100">
+  <div class="login-card card shadow-lg p-4">
+    <h3 class="text-center mb-4">Login</h3>
+
+    <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          [(ngModel)]="username"
+          #usernameField="ngModel"
+          required
+          placeholder="Enter username"
+        />
+        <div *ngIf="usernameField.invalid && usernameField.touched" class="text-danger small">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          [(ngModel)]="password"
+          #passwordField="ngModel"
+          required
+          placeholder="Enter password"
+        />
+        <div *ngIf="passwordField.invalid && passwordField.touched" class="text-danger small">
+          Password is required.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Login</button>
+
+      <div *ngIf="loginError" class="alert alert-danger mt-3 text-center">
+        Invalid username or password.
+      </div>
+    </form>
+  </div>
+</div>
