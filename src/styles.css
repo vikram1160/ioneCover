@@ -4,6 +4,12 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .p-card{
-    margin-left: 306%;
-    margin-top: 54%;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.highcharts-background{
+    display: none;
+}
+.highcharts-legend-box {
+margin-right: 300% !important;
 }

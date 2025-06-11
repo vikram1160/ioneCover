@@ -1,0 +1,8 @@
+/* .row{
+    margin-left: 62%;
+} */
+@media(min-width : 1280px){
+    .row{
+         margin-left: 62%;
+    }
+}

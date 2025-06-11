@@ -1,20 +1,16 @@
-/* General Styles */
-nav {
-  background-color: #f8f9fa;
-  padding: 0.5rem 1rem;
+.card{
+  border: none !important;
+  background: none !important;
 }
 
-/* Navbar brand link */
 .navbar-brand {
   font-size: 1.25rem;
 }
 
-/* Navbar collapsible area */
 .navbar-collapse {
   transition: all 0.3s ease-in-out;
 }
 
-/* Navigation links */
 .nav-link {
   font-weight: 500;
   color: #343a40 !important;
@@ -25,29 +21,35 @@ nav {
   color: #0d6efd !important;
 }
 
-/* Search form input and button */
 form[role="search"] {
   gap: 0.5rem;
 }
 
-/* Gap between navbar items */
 .navbar-nav {
   gap: 0.5rem;
 }
 
-.logout-btn{
-  margin-top: -4.7%;
-    margin-left: 90%;
+.logout-btn {
+  margin-top: -4.8% !important;
+  margin-left: 90%;
 }
 
+@media (max-width: 3950px) {
+  .logout-btn {
+       margin-top: -45px !important;
+  }
+}
 
-
-/* Small screens (mobile) */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     flex-direction: column;
     align-items: flex-start;
   }
+.logout-btn {
+    margin-top: 1%;
+  }
+
+  
 
   .navbar-nav {
     flex-direction: column;
@@ -69,14 +71,13 @@ form[role="search"] {
 }
 
 @media (max-width:868px) {
-     .navbar-brand{
-   margin-top: -28%;
-   position: fixed;
+  .navbar-brand {
+    margin-top: -28%;
+    position: fixed;
   }
-    
+
 }
 
-/* Large screens (laptop and above) */
 @media (min-width: 992px) {
   .navbar-collapse {
     flex-direction: row;
@@ -102,5 +103,5 @@ form[role="search"] {
     width: auto;
     margin-top: 0;
   }
- 
+
 }

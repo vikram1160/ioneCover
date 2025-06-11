@@ -1,0 +1,55 @@
+<!-- Employee Form -->
+<div style="display: flex; justify-content: center; margin: 10px 0; gap: 2rem;">
+  <div class="divone">
+    <label for="firstName">First Name:</label><br />
+    <input
+      pInputText
+      id="firstName"
+      type="text"
+      placeholder="Enter First Name"
+      [(ngModel)]="employeeData.firstName"
+    />
+  </div>
+
+  <div class="divone">
+    <label for="lastName">Last Name:</label><br />
+    <input
+      pInputText
+      id="lastName"
+      type="text"
+      placeholder="Enter Last Name"
+      [(ngModel)]="employeeData.lastName"
+    />
+  </div>
+
+  <div class="divone">
+    <label for="age">Age:</label><br />
+    <p-inputNumber
+      inputId="age"
+      [(ngModel)]="employeeData.age"
+      placeholder="Enter Age"
+      [useGrouping]="false"
+    ></p-inputNumber>
+  </div>
+</div>
+
+<!-- Action Buttons -->
+<div class="row">
+  <div class="col-4 m-5">
+    <button
+      pButton
+      type="button"
+      label="{{ isEditMode ? 'Save' : 'Update' }}"
+      class="p-button-primary m-2"
+      (click)="handleSave()"
+    ></button>
+
+    <button
+      pButton
+      type="button"
+      label="Back"
+      class="p-button-secondary m-2"
+      (click)="handleClear()"
+    ></button>
+  </div>
+</div>

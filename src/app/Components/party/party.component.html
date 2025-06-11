@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="m-2">
+    <button pButton type="button" label="Create" class="p-button-primary m-2" (click)="creat()"></button>
+    <button pButton type="button" label="Edit" class="p-button-primary m-2" (click)="editEmployee()"></button>
+    <button pButton type="button" label="View" class="p-button-primary m-2" (click)="viewdata()"></button>
+    <button pButton type="button" label="Delete" class="p-button-primary m-2" (click)="handleDelete()"></button>
+  </div>
+</div>
+
+
+<p-table 
+  [value]="data" 
+  [(selection)]="selectedEmployee" 
+  dataKey="id"
+  selectionMode="single"
+  [tableStyle]="{'border': '2px solid black'}"
+  class="p-datatable-striped p-datatable-gridlines"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th></th>
+      <th>Sr No</th>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-emp let-i="rowIndex">
+    <tr [pSelectableRow]="emp" (click)="selectedRowData(emp)">
+      <td>
+        <p-radioButton 
+          name="employeeRadio" 
+          [value]="emp" 
+          [(ngModel)]="selectedEmployee">
+        </p-radioButton>
+      </td>
+      <td>{{ i + 1 }}</td>
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.firstName }}</td>
+      <td>{{ emp.lastName }}</td>
+      <td>{{ emp.age }}</td>
+    </tr>
+  </ng-template>
+</p-table>
