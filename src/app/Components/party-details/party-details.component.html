@@ -3,19 +3,19 @@
   <div class="row first-row" style="display: flex; gap: 1rem;">
     <div class="divone">
       <label for="firstName">First Name:</label>
-      <input pInputText id="firstName" type="text" placeholder="Enter First Name"
+      <input pInputText id="firstName" type="text" placeholder="Enter First Name"   [disabled]="!isEditMode"
         [(ngModel)]="employeeData.firstName" />
     </div>
 
     <div class="divone">
       <label for="lastName">Last Name:</label>
-      <input pInputText id="lastName" type="text" placeholder="Enter Last Name"
+      <input pInputText id="lastName" type="text" placeholder="Enter Last Name"  [disabled]="!isEditMode"
         [(ngModel)]="employeeData.lastName" />
     </div>
 
     <div class="divone">
       <label for="age">Age:</label>
-      <p-inputNumber inputId="age" [(ngModel)]="employeeData.age" placeholder="Enter Age" [useGrouping]="false">
+      <p-inputNumber inputId="age" [(ngModel)]="employeeData.age" placeholder="Enter Age"  [disabled]="!isEditMode" [useGrouping]="false">
       </p-inputNumber>
     </div>
   </div>
@@ -24,20 +24,20 @@
   <div class="row second-row" style="display: flex; gap: 1rem; margin-top: 1rem;">
     <div class="divone">
       <label for="mobailNo">Mobile No:</label>
-      <p-inputNumber inputId="mobailNo" [(ngModel)]="employeeData.mobailNo" placeholder="Enter Mobile No">
+      <p-inputNumber inputId="mobailNo" [(ngModel)]="employeeData.mobailNo" placeholder="Enter Mobile No"  [disabled]="!isEditMode" >
       </p-inputNumber>
     </div>
 
     <div class="divone">
       <label for="emailId">Email Id:</label>
       <input pInputText id="emailId" type="email" [(ngModel)]="employeeData.emailId"
-        placeholder="Enter Email Id" />
+        placeholder="Enter Email Id"  [disabled]="!isEditMode" />
     </div>
 
     <div class="divone">
       <label for="emailId">City:</label>
       <input pInputText id="text" type="text" [(ngModel)]="employeeData.city"
-        placeholder="Enter Your City" />
+        placeholder="Enter Your City" [disabled]="!isEditMode"  />
     </div>
   </div>
 </div>

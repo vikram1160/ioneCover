@@ -55,7 +55,7 @@ router-outlet + * {
   padding: 20px 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
   .sidebar {
     width: 100%;
     height: auto;

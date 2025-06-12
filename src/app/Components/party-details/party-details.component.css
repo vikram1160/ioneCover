@@ -21,7 +21,7 @@
 .divone label {
   font-weight: 600;
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 input[type="text"],
@@ -42,6 +42,73 @@ input[type="email"],
   }
 
   .divone {
+    width: 100%;
+  }
+}
+
+
+.input {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.divone {
+  flex: 1;
+  min-width: 280px;
+}
+
+.divone label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+.p-inputtext {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.p-inputnumber {
+  width: 100%;
+}
+
+/* Button row alignment */
+.row .col-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .divone {
+    width: 100%;
+  }
+
+  .row .col-4 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
     width: 100%;
   }
 }

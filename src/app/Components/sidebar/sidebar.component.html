@@ -1,8 +1,53 @@
-<div class="menubar-Header">
+<!-- Sidebar Toggle Button (visible only on mobile) -->
+<button class="btn btn-outline-secondary d-md-none m-2" (click)="sidebarOpen = !sidebarOpen">
+  <i class="bi bi-list"></i>
+</button>
+
+<!-- Sidebar -->
+<div
+  class="bg-light p-3 vh-100 position-fixed top-0 start-0 border-end"
+  [ngClass]="{ 'd-none': !sidebarOpen, 'd-block': sidebarOpen, 'd-md-block': true }"
+  style="width: 260px; z-index: 1040;"
+>
+  <ul class="nav flex-column">
+    <li class="nav-item mb-3">
+      <a class="nav-link d-flex align-items-center  rounded py-2 px-3 " routerLink="/home">
+        <i class="bi bi-speedometer2 me-2 fs-5"></i>
+        Dashboard
+        <i class="bi bi-chevron-down ms-auto text-warning"></i>
+      </a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-diagram-3 me-2 fs-5"></i> Advisers</a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-people-gear me-2 fs-5"></i> Maintain Parties</a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-wallet2 me-2 fs-5"></i> Portfolios <i class="bi bi-chevron-down ms-auto"></i></a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-tools me-2 fs-5"></i> Instruments <i class="bi bi-chevron-down ms-auto"></i></a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-card-checklist me-2 fs-5"></i> Order management</a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-arrow-left-right me-2 fs-5"></i> Transaction <i class="bi bi-chevron-down ms-auto"></i></a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="nav-link d-flex align-items-center" routerLink="/home"><i class="bi bi-calculator me-2 fs-5"></i> Accounting <i class="bi bi-chevron-down ms-auto"></i></a>
+    </li>
+  </ul>
+</div>
+
+
+
+<!-- <div class="menubar-Header">
    <app-menubar-header></app-menubar-header>
 </div>
 
 
 <div class="menubar-footer">
     <app-menubar-footer></app-menubar-footer>
-</div>
+</div> -->

@@ -9,7 +9,7 @@ import { EmployeeData } from '../party/employee-data';
 @Component({
   selector: 'app-party-details',
   standalone: true,
-  imports: [ InputTextModule,
+  imports: [InputTextModule,
     InputNumberModule,
     ButtonModule,
     FormsModule,],
@@ -17,7 +17,7 @@ import { EmployeeData } from '../party/employee-data';
   styleUrl: './party-details.component.css'
 })
 export class PartyDetailsComponent {
- data = [...EmployeeData];
+  data = [...EmployeeData];
   firstName: string = '';
   lastName: string = '';
   age: number | null = null;
@@ -30,6 +30,7 @@ export class PartyDetailsComponent {
   mobailNo: number | null = null;
 
   employeeData: any = {};
+
 
 
 
@@ -53,10 +54,10 @@ export class PartyDetailsComponent {
   handleClear(): void {
     this.router.navigate(['/party',]);
   }
-  
+
   handleSave(): void {
-    let error = ''; 
-  
+    let error = '';
+
     if (error === '') {
       if (this.isEditMode === "false") {
         // Create mode - Add new employee
@@ -81,8 +82,8 @@ export class PartyDetailsComponent {
           console.error('Employee not found with ID:', this.employeeData.id);
         }
       }
-  
-   
+
+
       this.router.navigate(['/party'], {
         queryParams: {
           data: JSON.stringify(this.data),
@@ -92,5 +93,5 @@ export class PartyDetailsComponent {
     } else {
       console.error('Error:', error);
     }
-  } 
+  }
 }

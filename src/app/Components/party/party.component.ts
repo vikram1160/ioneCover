@@ -20,7 +20,7 @@ import { DataService } from './data.service';
 export class PartyComponent {
 
 
-   selectedEmployeeId: number | null = null;
+  selectedEmployeeId: number | null = null;
   employeeName: string = '';
   selectedParty: any = null;
   selectedEmployee: any = null;
@@ -28,30 +28,28 @@ export class PartyComponent {
   partyDetails: any;
   index: any;
   isEditMode!: string | null;
-  id : number | undefined
-  mobailNo : number | undefined;
-
-
-  data = [...EmployeeData]; 
+  id: number | undefined
+  mobailNo: number | undefined;
+  data = [...EmployeeData];
   lastName: string = '';
   age: number | null = null;
-  emailId : string = '';
-  city:string = '';
+  emailId: string = '';
+  city: string = '';
   isUpdate: boolean = false;
-  firstName:any;
+  firstName: any;
 
 
 
 
-   constructor(private router: Router, private route: ActivatedRoute,private dataService: DataService) {
+  constructor(private router: Router, private route: ActivatedRoute, private dataService: DataService) {
     this.route.queryParamMap.subscribe(params => {
 
-        });
+    });
   }
 
 
   employeeData: any;
-  ngOnInit(){
+  ngOnInit() {
     this.route.queryParams.subscribe(params => {
       if (params['data']) {
 
@@ -62,25 +60,29 @@ export class PartyComponent {
       }
     });
   }
-  
+
   viewdata() {
-    if (this.selectedEmployee) {
-      this.router.navigate(['/party-details'], {
-        queryParams: { data: JSON.stringify(this.selectedEmployee), isEditMode: true }
-      });
-      console.log("Editing Employee:", this.selectedEmployee);
-    } else {
-      alert("Please select a row to edit!");
+  if (this.selectedEmployee) {
+    this.router.navigate(['/party-details'], {
+      queryParams: {
+      data: JSON.stringify(this.selectedEmployee),
+      isEditMode: false
+      }
+    });
+    console.log("Viewing Employee:", this.selectedEmployee);
+  } else {
+    alert("Please select a row to view!");
+  }
+}
+
+
+  creat() {
+    this.router.navigate(['/party-details',]), {
+      queryParams: { isEditMode: false }
     }
   }
-  
-  creat(){
-    this.router.navigate(['/party-details', ]),{
-      queryParams: {isEditMode:false}
-    }
-  } 
 
-  
+
   selectedRowData(emp: any) {
     this.selectedEmployee = emp;
   }
@@ -88,7 +90,7 @@ export class PartyComponent {
   editEmployee() {
     if (this.selectedEmployee) {
       this.router.navigate(['/party-details'], {
-        queryParams: { data: JSON.stringify(this.selectedEmployee), isEditMode: true }
+        queryParams: { data: JSON.stringify(this.selectedEmployee), isEditMode: true}
       });
       console.log("Editing Employee:", this.selectedEmployee);
     } else {
@@ -96,7 +98,7 @@ export class PartyComponent {
     }
   }
 
- 
+
 
   handleDelete() {
     if (this.selectedEmployee) {
