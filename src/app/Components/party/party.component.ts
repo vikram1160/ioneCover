@@ -29,11 +29,14 @@ export class PartyComponent {
   index: any;
   isEditMode!: string | null;
   id : number | undefined
+  mobailNo : number | undefined;
 
 
   data = [...EmployeeData]; 
   lastName: string = '';
   age: number | null = null;
+  emailId : string = '';
+  city:string = '';
   isUpdate: boolean = false;
   firstName:any;
 

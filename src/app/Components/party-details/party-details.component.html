@@ -1,55 +1,53 @@
-<!-- Employee Form -->
-<div style="display: flex; justify-content: center; margin: 10px 0; gap: 2rem;">
-  <div class="divone">
-    <label for="firstName">First Name:</label><br />
-    <input
-      pInputText
-      id="firstName"
-      type="text"
-      placeholder="Enter First Name"
-      [(ngModel)]="employeeData.firstName"
-    />
+<div class="input">
+  <!-- Top Row with 3 inputs -->
+  <div class="row first-row" style="display: flex; gap: 1rem;">
+    <div class="divone">
+      <label for="firstName">First Name:</label>
+      <input pInputText id="firstName" type="text" placeholder="Enter First Name"
+        [(ngModel)]="employeeData.firstName" />
+    </div>
+
+    <div class="divone">
+      <label for="lastName">Last Name:</label>
+      <input pInputText id="lastName" type="text" placeholder="Enter Last Name"
+        [(ngModel)]="employeeData.lastName" />
+    </div>
+
+    <div class="divone">
+      <label for="age">Age:</label>
+      <p-inputNumber inputId="age" [(ngModel)]="employeeData.age" placeholder="Enter Age" [useGrouping]="false">
+      </p-inputNumber>
+    </div>
   </div>
 
-  <div class="divone">
-    <label for="lastName">Last Name:</label><br />
-    <input
-      pInputText
-      id="lastName"
-      type="text"
-      placeholder="Enter Last Name"
-      [(ngModel)]="employeeData.lastName"
-    />
-  </div>
+  <!-- Bottom Row with 2 inputs -->
+  <div class="row second-row" style="display: flex; gap: 1rem; margin-top: 1rem;">
+    <div class="divone">
+      <label for="mobailNo">Mobile No:</label>
+      <p-inputNumber inputId="mobailNo" [(ngModel)]="employeeData.mobailNo" placeholder="Enter Mobile No">
+      </p-inputNumber>
+    </div>
 
-  <div class="divone">
-    <label for="age">Age:</label><br />
-    <p-inputNumber
-      inputId="age"
-      [(ngModel)]="employeeData.age"
-      placeholder="Enter Age"
-      [useGrouping]="false"
-    ></p-inputNumber>
+    <div class="divone">
+      <label for="emailId">Email Id:</label>
+      <input pInputText id="emailId" type="email" [(ngModel)]="employeeData.emailId"
+        placeholder="Enter Email Id" />
+    </div>
+
+    <div class="divone">
+      <label for="emailId">City:</label>
+      <input pInputText id="text" type="text" [(ngModel)]="employeeData.city"
+        placeholder="Enter Your City" />
+    </div>
   </div>
 </div>
 
-<!-- Action Buttons -->
-<div class="row">
-  <div class="col-4 m-5">
-    <button
-      pButton
-      type="button"
-      label="{{ isEditMode ? 'Save' : 'Update' }}"
-      class="p-button-primary m-2"
-      (click)="handleSave()"
-    ></button>
 
-    <button
-      pButton
-      type="button"
-      label="Back"
-      class="p-button-secondary m-2"
-      (click)="handleClear()"
-    ></button>
-  </div>
+<div class="row">
+    <div class="col-4 m-5">
+        <button pButton type="button" label="{{ isEditMode ? 'Save' : 'Update' }}" class="p-button-primary m-2"
+            (click)="handleSave()"></button>
+
+        <button pButton type="button" label="Back" class="p-button-secondary m-2" (click)="handleClear()"></button>
+    </div>
 </div>

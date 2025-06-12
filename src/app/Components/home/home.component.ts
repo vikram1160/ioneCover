@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component} from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { CardModule } from 'primeng/card';
@@ -16,18 +15,18 @@ import { CardModule } from 'primeng/card';
 })
 export class HomeComponent {
 
- constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+//  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      // Import and initialize highcharts-more only in the browser
-      import('highcharts/highcharts-more').then(HC_more => {
-        HC_more.default(Highcharts);
-      });
-      const token = localStorage.getItem('token');
-      console.log('Token:', token);
-    }
-  }
+//   ngOnInit(): void {
+//     if (isPlatformBrowser(this.platformId)) {
+//       // Import and initialize highcharts-more only in the browser
+//       import('highcharts/highcharts-more').then(HC_more => {
+//         HC_more.default(Highcharts);
+//       });
+//       const token = localStorage.getItem('token');
+//       console.log('Token:', token);
+//     }
+//   }
 
 
 

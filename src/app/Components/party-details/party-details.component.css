@@ -1,0 +1,47 @@
+.input {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+.col-4{
+    margin-left: 67% !important;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.divone {
+  flex: 1;
+  min-width: 250px;
+}
+
+.divone label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+.p-inputtext {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.p-inputnumber {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .divone {
+    width: 100%;
+  }
+}

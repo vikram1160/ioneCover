@@ -27,6 +27,7 @@ export class PartyDetailsComponent {
   selectedEmployee: any;
   isEditMode = "false";
   index!: number;
+  mobailNo: number | null = null;
 
   employeeData: any = {};
 
@@ -63,7 +64,10 @@ export class PartyDetailsComponent {
           id: this.data.length + 1,
           firstName: this.employeeData.firstName,
           lastName: this.employeeData.lastName,
-          age: this.employeeData.age!
+          age: this.employeeData.age!,
+          mobailNo: this.employeeData.mobailNo,
+          emailId: this.employeeData.emailId || '',
+          city: this.employeeData.city || '',
         };
         this.data.push(newEmployee);
         console.log('New employee added:', newEmployee);
